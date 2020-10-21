@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" xmlns:userController="clr-namespace:Nasibe.UserController" x:Class="Nasibe.Views.UnitQtyItmesWindow"
+        mc:Ignorable="d"
+        Title="UnitQtyItmesWindow" ShowInTaskbar="False" Height="402" Width="202" Background="{x:Null}" 
+    AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded"
+    WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" BorderThickness="1,1,1,1"
+    BorderBrush="Black">
+    <Window.Effect>
+        <DropShadowEffect ShadowDepth="20" BlurRadius="15" />
+    </Window.Effect>
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="402" Stroke="Black" VerticalAlignment="Top" Width="202"/>
+        <ScrollViewer Background="#FFF4F4F5" HorizontalScrollBarVisibility="Disabled"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                      VerticalScrollBarVisibility="Auto" Margin="0,0,0,44"
+                      FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch"
+                      >
+            <StackPanel x:Name="PanelCatalogItem" CanHorizontallyScroll="False"
+                        CanVerticallyScroll="True" FlowDirection="LeftToRight" HorizontalAlignment="Stretch">
+            </StackPanel>
+        </ScrollViewer>
+        <telerik:RadButton x:Name="BtnCancel" Content="بازگشت" HorizontalAlignment="Center" Height="44" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="202" FontWeight="Bold" FontSize="40" FontFamily="Arial" Padding="-1,0,0,0" Click="BtnCancel_Click" IsCancel="True" />
+    </Grid>
+</Window>
